@@ -5,15 +5,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background_image">
+
+    <ImageView
+        android:id="@+id/rose_image1"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:src="@drawable/rose_image1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOVE CALCULATOR"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rose_image2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/rose_image1"
+        app:layout_constraintRight_toLeftOf="@+id/rose_image2"/>
+
+    <ImageView
+        android:id="@+id/rose_image2"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:src="@drawable/rose_image2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_image1"
+        app:layout_constraintTop_toBottomOf="@+id/rose_image2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
@@ -58,36 +87,36 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <ImageView
             android:id="@+id/check"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Check"
-            android:layout_marginTop="10dp"/>
-
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:layout_marginTop="10dp"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text=""/>
-
-        <TextView
-            android:id="@+id/percentage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:layout_marginTop="10dp"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text=""/>
-
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/go_btn"
+            android:layout_marginTop="15dp"/>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bottom_image1"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/bottom_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+       />
+
+    <ImageView
+        android:id="@+id/bottom_image2"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/bottom_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
